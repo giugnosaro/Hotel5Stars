@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Hotel5Stars.Models.Dto.Customer>
+
+@{
+    ViewData["Title"] = "Customers";
+}
+
+<h1>Customers</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>CustomerId</th>
+            <th>FiscalCode</th>
+            <th>LastName</th>
+            <th>FirstName</th>
+            <th>City</th>
+            
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Mobile</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>@customer.CustomerId</td>
+                <td>@customer.FiscalCode</td>
+                <td>@customer.LastName</td>
+                <td>@customer.FirstName</td>
+                <td>@customer.City</td>
+                
+                <td>@customer.Email</td>
+                <td>@customer.Phone</td>
+                <td>@customer.Mobile</td>
+            </tr>
+        }
+    </tbody>
+</table>

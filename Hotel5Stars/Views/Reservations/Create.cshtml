@@ -1,0 +1,34 @@
+﻿
+@model Hotel5Stars.Models.Dto.Reservation
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="CustomerId"></label>
+        <select asp-for="CustomerId" asp-items="ViewBag.Customers" class="form-control"></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="RoomId"></label>
+        <select asp-for="RoomId" asp-items="ViewBag.Rooms" class="form-control"></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="FromDate"></label>
+        <input asp-for="FromDate" class="form-control" type="date" />
+    </div>
+    <div class="form-group">
+        <label asp-for="ToDate"></label>
+        <input asp-for="ToDate" class="form-control" type="date" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Deposit"></label>
+        <input asp-for="Deposit" class="form-control" type="number" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Rate"></label>
+        <input asp-for="Rate" class="form-control" type="number" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Details"></label>
+        <input asp-for="Details" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

@@ -1,0 +1,34 @@
+﻿@model Hotel5Stars.Models.Dto.AdditionalService
+
+@{
+    ViewData["Title"] = "Add Additional Service";
+}
+
+<h1>Add Additional Service</h1>
+
+<form asp-action="AddService">
+    <input type="hidden" asp-for="ReservationId" value="@ViewBag.ReservationId" />
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Date" class="control-label"></label>
+        <input asp-for="Date" class="form-control" type="date" />
+        <span asp-validation-for="Date" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Quantity" class="control-label"></label>
+        <input asp-for="Quantity" class="form-control" />
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Price" class="control-label"></label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Add Service" class="btn btn-primary" />
+    </div>
+</form>

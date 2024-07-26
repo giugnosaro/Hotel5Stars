@@ -1,0 +1,31 @@
+﻿@using Hotel5Stars.Models.Dto
+
+@model IEnumerable<Hotel5Stars.Models.ViewModels.ReservationViewModel>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Customer Last Name</th>
+            <th>Room Number</th>
+            <th>From Date</th>
+            <th>To Date</th>
+            <th>Deposit</th>
+            <th>Rate</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var reservation in Model)
+        {
+            <tr>
+                <td>@reservation.CustomerLastName</td>
+                <td>@reservation.RoomNumber</td>
+                <td>@reservation.FromDate.ToShortDateString()</td>
+                <td>@reservation.ToDate.ToShortDateString()</td>
+                <td>@reservation.Deposit</td>
+                <td>@reservation.Rate</td>
+                <td>@reservation.Details</td>
+            </tr>
+        }
+    </tbody>
+</table>
